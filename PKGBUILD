@@ -2,7 +2,7 @@
 
 pkgname=xlibre-video-amdgpu
 pkgver=25.0.1
-pkgrel=6
+pkgrel=7
 pkgdesc="XLibre fork of X.Org amdgpu video driver"
 arch=('x86_64')
 _pkgname="${pkgname//xlibre/xf86}"
