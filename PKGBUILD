@@ -2,7 +2,7 @@
 
 pkgname=xlibre-video-amdgpu
 pkgver=25.0.1
-pkgrel=5
+pkgrel=6
 pkgdesc="XLibre fork of X.Org amdgpu video driver"
 arch=('x86_64')
 _pkgname="${pkgname//xlibre/xf86}"
@@ -19,7 +19,7 @@ makedepends+=('meson')
 build() {
   artix-meson ${_pkgname}-xlibre-${_pkgname}-${pkgver} build \
     -D udev=enabled \
-    -D glamor=disabled \
+    -D glamor=enabled \
     -D configdir=/usr/share/X11/xorg.conf.d/  \
     -D moduledir="/usr/lib/xorg/modules/xlibre-${pkgver%%.*}/"
 
