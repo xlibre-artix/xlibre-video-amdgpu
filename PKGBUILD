@@ -2,7 +2,7 @@
 
 pkgname=xlibre-video-amdgpu
 pkgver=25.0.0
-pkgrel=4
+pkgrel=5
 pkgdesc="XLibre fork of X.Org amdgpu video driver"
 arch=('x86_64')
 _pkgname="${pkgname//xlibre/xf86}"
@@ -13,8 +13,8 @@ conflicts=("${_pkgname}")
 provides=("${_pkgname}")
 source=("${url}/archive/refs/tags/xlibre-${_pkgname}-${pkgver}.tar.gz")
 groups=('xlibre-drivers')
-depends+=('libudev' 'mesa' 'libdrm')
-makedepends+=('meson')
+depends+=('libudev' 'mesa' 'libdrm>=2.4.121')
+makedepends+=('meson>=0.59.0')
 
 build() {
   arch-meson ${_pkgname}-xlibre-${_pkgname}-${pkgver} build \
